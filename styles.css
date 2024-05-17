@@ -1,0 +1,64 @@
+body {
+    background-color: #111;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Hide vertical scroll bar */
+}
+.container {
+    display: flex;
+    height: calc(100% - 110px); /* Adjusted height to fit in one window */
+}
+.half {
+    width: 50%;
+    background-color: #FFD700; /* Yellow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 60px; /* Added padding */
+    height: calc(50% + 20%); /* Increased height by 20% */
+}
+.half.black {
+    background-color: #000; /* Black */
+}
+.content {
+    text-align: center;
+}
+input[type="text"] {
+    padding: 12px; /* Increased padding */
+    margin: 7px; /* Increased margin */
+    border-radius: 7px; /* Increased border radius */
+    border: none;
+    width: 260px; /* Increased width */
+}
+button {
+    padding: 13px 26px; /* Increased padding */
+    margin: 15px; /* Increased margin */
+    border-radius: 7px; /* Increased border radius */
+    border: none;
+    background-color: #00f; /* Blue */
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #0051a3; /* Darker Blue */
+}
+#score {
+    margin-top: 30px; /* Increased margin */
+    font-size: 20px; /* Increased font size */
+}
+#rank {
+    margin-top: 15px; /* Increased margin */
+    font-size: 18px; /* Increased font size */
+}
+h1 {
+    background-color: none;
+    text-align: center;
+    font-size: 50px; /* Increased font size */
+    margin: 0; /* Removed default margin */
+    padding: 20px 0; /* Added padding */
+}
