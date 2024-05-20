@@ -4,61 +4,61 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    height: 100%;
-    overflow: hidden; /* Hide vertical scroll bar */
 }
+
 .container {
     display: flex;
-    height: calc(100% - 110px); /* Adjusted height to fit in one window */
+    flex-direction: column; /* Change flex direction to column for mobile */
+    height: 100vh; /* Use viewport height */
 }
+
 .half {
-    width: 50%;
+    width: 100%; /* Make both halves full width on mobile */
+    height: 50%; /* Each half takes 50% of the screen height */
     background-color: #FFD700; /* Yellow */
-    display: flex;
-    justify-content: center;
-    align-items: center;
     box-sizing: border-box;
-    padding: 60px; /* Added padding */
-    height: calc(50% + 20%); /* Increased height by 20% */
+    padding: 20px; /* Reduced padding for mobile */
 }
+
 .half.black {
     background-color: #000; /* Black */
 }
+
 .content {
     text-align: center;
 }
+
 input[type="text"] {
-    padding: 12px; /* Increased padding */
-    margin: 7px; /* Increased margin */
-    border-radius: 7px; /* Increased border radius */
+    padding: 10px; /* Reduced padding for mobile */
+    margin: 5px; /* Reduced margin for mobile */
+    border-radius: 5px; /* Reduced border radius for mobile */
     border: none;
-    width: 260px; /* Increased width */
+    width: 80%; /* Adjusted width for mobile */
 }
+
 button {
-    padding: 13px 26px; /* Increased padding */
-    margin: 15px; /* Increased margin */
-    border-radius: 7px; /* Increased border radius */
+    padding: 10px 20px; /* Reduced padding for mobile */
+    margin: 10px; /* Adjusted margin for mobile */
+    border-radius: 5px; /* Reduced border radius for mobile */
     border: none;
-    background-color: #00f; /* Blue */
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s;
 }
-button:hover {
-    background-color: #0051a3; /* Darker Blue */
-}
-#score {
-    margin-top: 30px; /* Increased margin */
-    font-size: 20px; /* Increased font size */
-}
-#rank {
-    margin-top: 15px; /* Increased margin */
-    font-size: 18px; /* Increased font size */
-}
+
 h1 {
-    background-color: none;
     text-align: center;
-    font-size: 50px; /* Increased font size */
-    margin: 0; /* Removed default margin */
-    padding: 20px 0; /* Added padding */
+    font-size: 30px; /* Reduced font size for mobile */
+    margin: 0;
+    padding: 10px 0; /* Adjusted padding for mobile */
+}
+
+@media screen and (min-width: 600px) {
+    /* Apply styles only if screen width is 600px or larger */
+    .container {
+        flex-direction: row; /* Change back to row layout for larger screens */
+        height: calc(100vh - 110px); /* Adjusted height for larger screens */
+    }
+    .half {
+        width: 50%; /* Half width for larger screens */
+        height: calc(50% + 20%); /* Adjusted height for larger screens */
+        padding: 60px; /* Restored padding for larger screens */
+    }
 }
