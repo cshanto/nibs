@@ -17,7 +17,7 @@ function calculateScore() {
         document.getElementById("lastNameNibbi").disabled = true;
         
         // Display a message indicating that inputs are disabled
-        document.getElementById("score").innerHTML = "Inputs disabled for specified names.";
+        document.getElementById("score").innerHTML = "AAH AAH AAAH !, not this name 🤣.";
         document.getElementById("rank").innerHTML = "";
         document.getElementById("score").style.color = "gray";
         return;
