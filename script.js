@@ -4,6 +4,26 @@ function calculateScore() {
     var firstNameNibbi = document.getElementById("firstNameNibbi").value;
     var lastNameNibbi = document.getElementById("lastNameNibbi").value;
     
+    // Check if the input values match the specific names
+    if ((firstNameNibba.toLowerCase() === "sushanta" && lastNameNibba.toLowerCase() === "chakma") ||
+        (firstNameNibbi.toLowerCase() === "sushanta" && lastNameNibbi.toLowerCase() === "chakma") ||
+        (firstNameNibba.toLowerCase() === "sushanth" && lastNameNibba.toLowerCase() === "chakma") ||
+        (firstNameNibbi.toLowerCase() === "sushanth" && lastNameNibbi.toLowerCase() === "chakma")) {
+        
+        // If they match, disable the input fields
+        document.getElementById("firstNameNibba").disabled = true;
+        document.getElementById("lastNameNibba").disabled = true;
+        document.getElementById("firstNameNibbi").disabled = true;
+        document.getElementById("lastNameNibbi").disabled = true;
+        
+        // Display a message indicating that inputs are disabled
+        document.getElementById("score").innerHTML = "Inputs disabled for specified names.";
+        document.getElementById("rank").innerHTML = "";
+        document.getElementById("score").style.color = "gray";
+        return;
+    }
+    
+    // If the names don't match, continue calculating the score
     var scoreNibba = generateRandomScore(firstNameNibba, lastNameNibba);
     var scoreNibbi = generateRandomScore(firstNameNibbi, lastNameNibbi);
     
@@ -21,22 +41,4 @@ function calculateScore() {
 
     var rank = determineRank(averageScore);
     document.getElementById("rank").innerHTML = "Rank: " + rank;
-}
-
-function generateRandomScore(firstName, lastName) {
-    // Generate a random number between 1 and 100 (inclusive)
-    var randomScore = Math.floor(Math.random() * 100) + 1;
-    return firstName.length * lastName.length * randomScore;
-}
-
-function determineRank(score) {
-    if (score >= 90) {
-        return "Diamond";
-    } else if (score >= 70) {
-        return "Gold";
-    } else if (score >= 50) {
-        return "Silver";
-    } else {
-        return "Bronze";
-    }
 }
