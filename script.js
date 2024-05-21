@@ -5,7 +5,7 @@ function calculateScore() {
     var lastNameNibbi = document.getElementById("lastNameNibbi").value;
     
     // Check if the input values match the specific names
-    if ((firstNameNibba.toLowerCase() === "sushanta" && lastNameNibba.toLowerCase() === "chakma") ||
+    if ((firstNameNibba.toLowerCase() === "sushanta" && lastNameNibba.toLowerCase() === "chakma) ||
         (firstNameNibbi.toLowerCase() === "sushanta" && lastNameNibbi.toLowerCase() === "chakma") ||
         (firstNameNibba.toLowerCase() === "sushanth" && lastNameNibba.toLowerCase() === "chakma") ||
         (firstNameNibbi.toLowerCase() === "sushanth" && lastNameNibbi.toLowerCase() === "chakma")) {
