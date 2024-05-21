@@ -1,4 +1,4 @@
-
+// script.js
 
 function calculateScore() {
     var firstNameNibba = document.getElementById("firstNameNibba").value;
@@ -19,7 +19,7 @@ function calculateScore() {
         document.getElementById("lastNameNibbi").disabled = true;
 
         // Display a message indicating that inputs are disabled
-        document.getElementById("score").innerHTML = "AAH AAH AAAH !, not this name 🤣.";
+        document.getElementById("score").innerHTML = "Inputs disabled for specified names.";
         document.getElementById("rank").innerHTML = "";
         document.getElementById("score").style.color = "gray";
         return;
@@ -71,6 +71,3 @@ function determineRank(score) {
         return "Bronze";
     }
 }
-
-
-
