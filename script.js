@@ -23,6 +23,10 @@ function calculateScore() {
         document.getElementById("score").innerHTML = "AAH AAH AAAH !, not this name 🤣.";
         document.getElementById("rank").innerHTML = "";
         document.getElementById("score").style.color = "gray";
+
+setTimeout(() => {
+  location.reload()
+}, 3000)
         return;
     } else {
         // If different names are entered, re-enable the input fields
