@@ -3,9 +3,13 @@
 // Function to calculate score
 function calculateScore() {
     var firstNameNibba = document.getElementById("firstNameNibba").value;
+firstNameNibba=firstNameNibba.split(" ").join();
     var lastNameNibba = document.getElementById("lastNameNibba").value;
+lastNameNibba=lastNameNibba.split(" ").join();
     var firstNameNibbi = document.getElementById("firstNameNibbi").value;
+firstNameNibbi=firstNameNibbi.split(" ").join();
     var lastNameNibbi = document.getElementById("lastNameNibbi").value;
+lastNameNibbi=lastNameNibbi.split(" ").join();
 
     // Check if the input values match the specific names
     if ((firstNameNibba.toLowerCase() === "sushanta" || lastNameNibba.toLowerCase() === "sushanta") ||
