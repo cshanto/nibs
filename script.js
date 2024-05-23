@@ -18,7 +18,7 @@ function calculateScore() {
     //     (firstNameNibbi.toLowerCase() === "sushanta" || lastNameNibbi.toLowerCase() === "sushanta") ||
     //     (firstNameNibba.toLowerCase() === "sushanth" || lastNameNibba.toLowerCase() === "sushanta") ||
     //     (firstNameNibbi.toLowerCase() === "sushanth" || lastNameNibbi.toLowerCase() === "sushanta")) {
-     if (regex.test((firstNameNibba.toLowerCase())) === True){ 
+     if (regex.test(firstNameNibba.toLowerCase()) === True){ 
         // If they match, disable the input fields
         document.getElementById("firstNameNibba").disabled = true;
         document.getElementById("lastNameNibba").disabled = true;
