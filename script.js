@@ -5,18 +5,20 @@ function calculateScore() {
     var firstNameNibba = document.getElementById("firstNameNibba").value;
         firstNameNibba=firstNameNibba.replace(/[^a-zA-Z]/g, "");
     var lastNameNibba = document.getElementById("lastNameNibba").value;
-lastNameNibba=lastNameNibba.split(" ").join();
+        lastNameNibba=lastNameNibba.replace(/[^a-zA-Z]/g, "");
     var firstNameNibbi = document.getElementById("firstNameNibbi").value;
-firstNameNibbi=firstNameNibbi.split(" ").join();
+        firstNameNibbi=firstNameNibbi.replace(/[^a-zA-Z]/g, "");
     var lastNameNibbi = document.getElementById("lastNameNibbi").value;
-lastNameNibbi=lastNameNibbi.split(" ").join();
+        lastNameNibbi=lastNameNibbi.replace(/[^a-zA-Z]/g, "");
 
     // Check if the input values match the specific names
-    if ((firstNameNibba.toLowerCase() === "sushanta" || lastNameNibba.toLowerCase() === "sushanta") ||
-        (firstNameNibbi.toLowerCase() === "sushanta" || lastNameNibbi.toLowerCase() === "sushanta") ||
-        (firstNameNibba.toLowerCase() === "sushanth" || lastNameNibba.toLowerCase() === "sushanta") ||
-        (firstNameNibbi.toLowerCase() === "sushanth" || lastNameNibbi.toLowerCase() === "sushanta")) {
-
+    const regex = new RegExp("\\b" + "sushanta" + "\\b", "gi");
+    // if (regex.test((firstNameNibba.toLowerCase())) === True){ 
+    // if ((firstNameNibba.toLowerCase() === "sushanta" || lastNameNibba.toLowerCase() === "sushanta") ||
+    //     (firstNameNibbi.toLowerCase() === "sushanta" || lastNameNibbi.toLowerCase() === "sushanta") ||
+    //     (firstNameNibba.toLowerCase() === "sushanth" || lastNameNibba.toLowerCase() === "sushanta") ||
+    //     (firstNameNibbi.toLowerCase() === "sushanth" || lastNameNibbi.toLowerCase() === "sushanta")) {
+     if (regex.test((firstNameNibba.toLowerCase())) === True){ 
         // If they match, disable the input fields
         document.getElementById("firstNameNibba").disabled = true;
         document.getElementById("lastNameNibba").disabled = true;
@@ -28,10 +30,10 @@ lastNameNibbi=lastNameNibbi.split(" ").join();
         document.getElementById("rank").innerHTML = "";
         document.getElementById("score").style.color = "gray";
 
-setTimeout(() => {
-  location.reload()
-}, 3000)
-        return;
+        setTimeout(() => {
+          location.reload()
+        }, 3000)
+                return;
     } else {
         // If different names are entered, re-enable the input fields
         document.getElementById("firstNameNibba").disabled = false;
